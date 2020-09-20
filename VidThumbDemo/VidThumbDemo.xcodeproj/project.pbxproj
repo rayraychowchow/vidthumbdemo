@@ -42,6 +42,8 @@
 		714E265625173AC800875187 /* TEST0353.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264225173AC800875187 /* TEST0353.avi */; };
 		714E265725173AC800875187 /* TEST0056.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264325173AC800875187 /* TEST0056.avi */; };
 		714E265825173AC800875187 /* TEST0513.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264425173AC800875187 /* TEST0513.avi */; };
+		714E268F25176F0500875187 /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E268E25176F0500875187 /* VideoEntity.swift */; };
+		714E26952517700A00875187 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E26942517700A00875187 /* VideoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		714E264225173AC800875187 /* TEST0353.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0353.avi; sourceTree = "<group>"; };
 		714E264325173AC800875187 /* TEST0056.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0056.avi; sourceTree = "<group>"; };
 		714E264425173AC800875187 /* TEST0513.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0513.avi; sourceTree = "<group>"; };
+		714E268E25176F0500875187 /* VideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntity.swift; sourceTree = "<group>"; };
+		714E26942517700A00875187 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 		714E25C42517265200875187 /* VidThumbDemo */ = {
 			isa = PBXGroup;
 			children = (
+				714E269325176FF900875187 /* Manager */,
+				714E268D25176EF000875187 /* Entity */,
 				714E263025173AAA00875187 /* DemoVideoFiles */,
 				714E26222517316900875187 /* Protocol */,
 				714E260925172E9600875187 /* Base ViewController */,
@@ -245,6 +251,22 @@
 				714E263325173AC800875187 /* TEST0598.avi */,
 			);
 			path = DemoVideoFiles;
+			sourceTree = "<group>";
+		};
+		714E268D25176EF000875187 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				714E268E25176F0500875187 /* VideoEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		714E269325176FF900875187 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				714E26942517700A00875187 /* VideoManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,7 +427,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714E268F25176F0500875187 /* VideoEntity.swift in Sources */,
 				714E260525172E8900875187 /* VideoThumbViewController.swift in Sources */,
+				714E26952517700A00875187 /* VideoManager.swift in Sources */,
 				714E260B25172EAA00875187 /* BaseViewController.swift in Sources */,
 				714E25C62517265200875187 /* AppDelegate.swift in Sources */,
 				714E26242517317D00875187 /* CustomCellable.swift in Sources */,

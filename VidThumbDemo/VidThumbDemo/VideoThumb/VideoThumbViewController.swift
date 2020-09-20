@@ -14,7 +14,6 @@ class VideoThumbViewController: BaseViewController<VideoThumbInteractor, VideoTh
     @IBOutlet weak var videoThumbCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        presenter.setupAVSession()
         presenter.getDemoVideos().subscribe().disposed(by: disposeBag)
     }
     
@@ -37,8 +36,23 @@ class VideoThumbViewController: BaseViewController<VideoThumbInteractor, VideoTh
             .bind(to: videoThumbCollectionView.rx
                     .items(cellIdentifier: VideoThumbCollectionViewCell.reuseId,
                            cellType: VideoThumbCollectionViewCell.self))
-            { index, asset, cell in
-            cell.setupCell(with: asset)
+            { index, videoEntity, cell in
+            cell.setupCell(with: videoEntity)
         }.disposed(by: disposeBag)
+        
+        videoThumbCollectionView.rx.willDisplayCell
+            .subscribe { cell, indexPath in
+                if let videoThumbCell = cell as? VideoThumbCollectionViewCell {
+                    videoThumbCell.playVideo()
+                }
+            }.disposed(by: disposeBag)
+
+        videoThumbCollectionView.rx.didEndDisplayingCell
+            .subscribe { cell, indexPath in
+                if let videoThumbCell = cell as? VideoThumbCollectionViewCell {
+                    videoThumbCell.pauseVideo()
+                }
+            }.disposed(by: disposeBag)
+
     }
 }

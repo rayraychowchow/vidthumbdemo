@@ -11,20 +11,11 @@ import AVKit
 import RxCocoa
 
 class VideoThumbPresenter: BasePresenter<VideoThumbInteractor, BaseRouter> {
-    let avAssets = BehaviorRelay<[AVAsset]>(value: [])
-    
-    func setupAVSession() {
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback)
-        } catch {
-            
-        }
-    }
+    let avAssets = BehaviorRelay<[VideoEntity]>(value: [])
     
     func getDemoVideos() -> Observable<Bool> {
-        return interactor.getDemoVideos().do{ [weak self] demoVideoAssets in
-            self?.avAssets.accept(demoVideoAssets)
+        return interactor.getDemoVideos().do{ [weak self] demoVideos in
+            self?.avAssets.accept(demoVideos)
         }.map({ _ in true })
     }
 }

@@ -12,18 +12,18 @@ import AVKit
 class VideoThumbInteractor: BaseInteractor {
     let fileManager = FileManager.default
     
-    func getDemoVideos() -> Observable<[AVAsset]> {
+    func getDemoVideos() -> Observable<[VideoEntity]> {
         return Observable.create { [weak self] observer in
             guard let this = self else { return Disposables.create{} }
             do {
                 var documentList = try this.fileManager.contentsOfDirectory(atPath: Bundle.main.bundlePath)
                 documentList.removeAll { !$0.hasSuffix(".avi") }
                 
-                var avAssets: [AVAsset] = []
+                var avAssets: [VideoEntity] = []
                 
                 for fileName in documentList {
                     if let videoPath = Bundle.main.path(forResource: fileName, ofType: nil) {
-                        avAssets.append(AVAsset(url: URL(fileURLWithPath: videoPath)))
+                        avAssets.append(VideoEntity(fileName: fileName, asset: AVAsset(url: URL(fileURLWithPath: videoPath))))
                     }
                 }
                 
