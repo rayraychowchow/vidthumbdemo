@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		714E25C62517265200875187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E25C52517265200875187 /* AppDelegate.swift */; };
-		714E25C82517265200875187 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E25C72517265200875187 /* SceneDelegate.swift */; };
 		714E25CD2517265200875187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714E25CB2517265200875187 /* Main.storyboard */; };
 		714E25CF2517265400875187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714E25CE2517265400875187 /* Assets.xcassets */; };
 		714E25D22517265400875187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714E25D02517265400875187 /* LaunchScreen.storyboard */; };
@@ -65,7 +64,6 @@
 /* Begin PBXFileReference section */
 		714E25C22517265200875187 /* VidThumbDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VidThumbDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714E25C52517265200875187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		714E25C72517265200875187 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		714E25CC2517265200875187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		714E25CE2517265400875187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714E25D12517265400875187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 				714E26222517316900875187 /* Protocol */,
 				714E260925172E9600875187 /* Base ViewController */,
 				714E25C52517265200875187 /* AppDelegate.swift */,
-				714E25C72517265200875187 /* SceneDelegate.swift */,
 				714E25CE2517265400875187 /* Assets.xcassets */,
 				714E25D02517265400875187 /* LaunchScreen.storyboard */,
 				714E25D32517265400875187 /* Info.plist */,
@@ -190,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				714E26172517313A00875187 /* Views */,
-				714E25CB2517265200875187 /* Main.storyboard */,
 				714E260425172E8900875187 /* VideoThumbViewController.swift */,
 				714E2612251730B800875187 /* VideoThumbPresenter.swift */,
 				714E262B25173A3000875187 /* VideoThumbInteractor.swift */,
@@ -209,6 +205,7 @@
 		714E26172517313A00875187 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				714E25CB2517265200875187 /* Main.storyboard */,
 				714E26182517315600875187 /* VideoThumbCollectionViewCell.xib */,
 				714E261D2517315F00875187 /* VideoThumbCollectionViewCell.swift */,
 			);
@@ -411,7 +408,6 @@
 				714E260525172E8900875187 /* VideoThumbViewController.swift in Sources */,
 				714E260B25172EAA00875187 /* BaseViewController.swift in Sources */,
 				714E25C62517265200875187 /* AppDelegate.swift in Sources */,
-				714E25C82517265200875187 /* SceneDelegate.swift in Sources */,
 				714E26242517317D00875187 /* CustomCellable.swift in Sources */,
 				714E2613251730B800875187 /* VideoThumbPresenter.swift in Sources */,
 				714E261E2517315F00875187 /* VideoThumbCollectionViewCell.swift in Sources */,
@@ -592,12 +588,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B44JQ4HGJ4;
 				INFOPLIST_FILE = VidThumbDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.stealthcam.VidThumbDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stealthcam.VidThumbDemo.ray;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -610,12 +608,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B44JQ4HGJ4;
 				INFOPLIST_FILE = VidThumbDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.stealthcam.VidThumbDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stealthcam.VidThumbDemo.ray;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
