@@ -26,6 +26,7 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     
     func doSetupIfNeed() {
         guard !isDidSetup else { return }
+        avplayer.isMuted = true
         playerLayer.player = avplayer
         playerLayer.frame = videoView.bounds
         videoView.layer.addSublayer(playerLayer)

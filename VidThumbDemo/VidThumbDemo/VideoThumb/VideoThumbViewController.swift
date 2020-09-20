@@ -18,6 +18,10 @@ class VideoThumbViewController: BaseViewController<VideoThumbInteractor, VideoTh
         presenter.getDemoVideos().subscribe().disposed(by: disposeBag)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     override func setupUI() {
         super.setupUI()
         if let flowLayout = videoThumbCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
