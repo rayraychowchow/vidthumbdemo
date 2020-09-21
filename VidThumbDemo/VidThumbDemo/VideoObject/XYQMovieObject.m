@@ -37,6 +37,15 @@
         return nil;
     }
 }
+
+-(NSString*)getFilePath {
+    if (_cruutenPath != nil) {
+        return _cruutenPath;
+    } else {
+        return @"";
+    }
+}
+
 - (BOOL)initializeResources:(const char *)filePath {
     
     isReleaseResources = NO;

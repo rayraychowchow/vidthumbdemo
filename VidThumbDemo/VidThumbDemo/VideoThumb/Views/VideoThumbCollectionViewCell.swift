@@ -58,8 +58,7 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     
     func pauseVideo() {
         resetTimer()
-        if var ve = videoEntity {
-//            ve.currentTime = videoObj.currentTime
+        if let ve = videoEntity {
             VideoManager.shared.setPlayTime(videoEntity: ve)
         }
     }
@@ -70,9 +69,5 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
             videoObj.seekTime(VideoManager.shared.getPlayTime(videoEntity: ve))
             startTimer()
         }
-    }
-    
-    @objc func notifyPlayerOpened() {
-        
     }
 }

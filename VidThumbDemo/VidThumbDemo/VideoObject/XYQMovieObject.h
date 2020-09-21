@@ -47,4 +47,6 @@
 /* 寻求最近的关键帧在指定的时间 */
 - (void)seekTime:(double)seconds;
 
+-(NSString*)getFilePath;
+
 @end

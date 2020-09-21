@@ -44,23 +44,6 @@
 		714E265825173AC800875187 /* TEST0513.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264425173AC800875187 /* TEST0513.avi */; };
 		714E268F25176F0500875187 /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E268E25176F0500875187 /* VideoEntity.swift */; };
 		714E26952517700A00875187 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E26942517700A00875187 /* VideoManager.swift */; };
-		7157F61D2518DD09005463E4 /* DLGPlayerDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F5F92518DD09005463E4 /* DLGPlayerDecoder.m */; };
-		7157F61E2518DD09005463E4 /* DLGPlayerAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F5FA2518DD09005463E4 /* DLGPlayerAudioManager.m */; };
-		7157F61F2518DD09005463E4 /* DLGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F5FD2518DD09005463E4 /* DLGPlayer.m */; };
-		7157F6202518DD09005463E4 /* DLGPlayerVideoRGBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6012518DD09005463E4 /* DLGPlayerVideoRGBFrame.m */; };
-		7157F6212518DD09005463E4 /* DLGPlayerAudioFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6022518DD09005463E4 /* DLGPlayerAudioFrame.m */; };
-		7157F6222518DD09005463E4 /* DLGPlayerVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6052518DD09005463E4 /* DLGPlayerVideoFrame.m */; };
-		7157F6232518DD09005463E4 /* DLGPlayerVideoYUVFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6062518DD09005463E4 /* DLGPlayerVideoYUVFrame.m */; };
-		7157F6242518DD09005463E4 /* DLGPlayerFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6082518DD09005463E4 /* DLGPlayerFrame.m */; };
-		7157F6252518DD09005463E4 /* DLGPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6092518DD09005463E4 /* DLGPlayerViewController.m */; };
-		7157F6262518DD09005463E4 /* DLGPlayerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F60D2518DD09005463E4 /* DLGPlayerUtils.m */; };
-		7157F6272518DD09005463E4 /* DLGPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F60F2518DD09005463E4 /* DLGPlayerView.m */; };
-		7157F6282518DD09005463E4 /* DLGPlayerStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7157F6132518DD09005463E4 /* DLGPlayerStrings.strings */; };
-		7157F6292518DD09005463E4 /* DLGPlayerRotationScaleVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 7157F6162518DD09005463E4 /* DLGPlayerRotationScaleVertexShader.glsl */; };
-		7157F62A2518DD09005463E4 /* DLGPlayerYUVFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 7157F6172518DD09005463E4 /* DLGPlayerYUVFragmentShader.glsl */; };
-		7157F62B2518DD09005463E4 /* DLGPlayerRGBFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 7157F6182518DD09005463E4 /* DLGPlayerRGBFragmentShader.glsl */; };
-		7157F62C2518DD09005463E4 /* DLGPlayerRotationVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 7157F61A2518DD09005463E4 /* DLGPlayerRotationVertexShader.glsl */; };
-		7157F62D2518DD09005463E4 /* DLGPlayerVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 7157F61B2518DD09005463E4 /* DLGPlayerVertexShader.glsl */; };
 		7157F6FE2518DD20005463E4 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6B62518DD20005463E4 /* DDTTYLogger.m */; };
 		7157F6FF2518DD20005463E4 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6B92518DD20005463E4 /* DDASLLogger.m */; };
 		7157F7002518DD20005463E4 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F6BC2518DD20005463E4 /* DDContextFilterLogFormatter.m */; };
@@ -170,37 +153,6 @@
 		714E264425173AC800875187 /* TEST0513.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0513.avi; sourceTree = "<group>"; };
 		714E268E25176F0500875187 /* VideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntity.swift; sourceTree = "<group>"; };
 		714E26942517700A00875187 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
-		7157F5F92518DD09005463E4 /* DLGPlayerDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerDecoder.m; sourceTree = "<group>"; };
-		7157F5FA2518DD09005463E4 /* DLGPlayerAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerAudioManager.m; sourceTree = "<group>"; };
-		7157F5FB2518DD09005463E4 /* DLGPlayerDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerDecoder.h; sourceTree = "<group>"; };
-		7157F5FC2518DD09005463E4 /* DLGPlayerAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerAudioManager.h; sourceTree = "<group>"; };
-		7157F5FD2518DD09005463E4 /* DLGPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayer.m; sourceTree = "<group>"; };
-		7157F5FF2518DD09005463E4 /* DLGPlayerVideoYUVFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerVideoYUVFrame.h; sourceTree = "<group>"; };
-		7157F6002518DD09005463E4 /* DLGPlayerVideoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerVideoFrame.h; sourceTree = "<group>"; };
-		7157F6012518DD09005463E4 /* DLGPlayerVideoRGBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerVideoRGBFrame.m; sourceTree = "<group>"; };
-		7157F6022518DD09005463E4 /* DLGPlayerAudioFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerAudioFrame.m; sourceTree = "<group>"; };
-		7157F6032518DD09005463E4 /* DLGPlayerFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerFrame.h; sourceTree = "<group>"; };
-		7157F6042518DD09005463E4 /* DLGPlayerVideoRGBFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerVideoRGBFrame.h; sourceTree = "<group>"; };
-		7157F6052518DD09005463E4 /* DLGPlayerVideoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerVideoFrame.m; sourceTree = "<group>"; };
-		7157F6062518DD09005463E4 /* DLGPlayerVideoYUVFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerVideoYUVFrame.m; sourceTree = "<group>"; };
-		7157F6072518DD09005463E4 /* DLGPlayerAudioFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerAudioFrame.h; sourceTree = "<group>"; };
-		7157F6082518DD09005463E4 /* DLGPlayerFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerFrame.m; sourceTree = "<group>"; };
-		7157F6092518DD09005463E4 /* DLGPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerViewController.m; sourceTree = "<group>"; };
-		7157F60B2518DD09005463E4 /* DLGPlayerDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerDef.h; sourceTree = "<group>"; };
-		7157F60C2518DD09005463E4 /* DLGPlayerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerUtils.h; sourceTree = "<group>"; };
-		7157F60D2518DD09005463E4 /* DLGPlayerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerUtils.m; sourceTree = "<group>"; };
-		7157F60F2518DD09005463E4 /* DLGPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLGPlayerView.m; sourceTree = "<group>"; };
-		7157F6102518DD09005463E4 /* DLGPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerView.h; sourceTree = "<group>"; };
-		7157F6112518DD09005463E4 /* DLGPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayer.h; sourceTree = "<group>"; };
-		7157F6142518DD09005463E4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DLGPlayerStrings.strings"; sourceTree = "<group>"; };
-		7157F6152518DD09005463E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DLGPlayerStrings.strings; sourceTree = "<group>"; };
-		7157F6162518DD09005463E4 /* DLGPlayerRotationScaleVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DLGPlayerRotationScaleVertexShader.glsl; sourceTree = "<group>"; };
-		7157F6172518DD09005463E4 /* DLGPlayerYUVFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DLGPlayerYUVFragmentShader.glsl; sourceTree = "<group>"; };
-		7157F6182518DD09005463E4 /* DLGPlayerRGBFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DLGPlayerRGBFragmentShader.glsl; sourceTree = "<group>"; };
-		7157F6192518DD09005463E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/DLGPlayerStrings.strings; sourceTree = "<group>"; };
-		7157F61A2518DD09005463E4 /* DLGPlayerRotationVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DLGPlayerRotationVertexShader.glsl; sourceTree = "<group>"; };
-		7157F61B2518DD09005463E4 /* DLGPlayerVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DLGPlayerVertexShader.glsl; sourceTree = "<group>"; };
-		7157F61C2518DD09005463E4 /* DLGPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLGPlayerViewController.h; sourceTree = "<group>"; };
 		7157F6352518DD20005463E4 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		7157F6362518DD20005463E4 /* buffersrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersrc.h; sourceTree = "<group>"; };
 		7157F6372518DD20005463E4 /* buffersink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffersink.h; sourceTree = "<group>"; };
@@ -469,7 +421,6 @@
 				7157F8282518FC45005463E4 /* VideoObject */,
 				7157F7762518EE24005463E4 /* VIdeoPlayer */,
 				7157F6312518DD20005463E4 /* Externals */,
-				7157F5F72518DD09005463E4 /* DLGPlayer */,
 				714E269325176FF900875187 /* Manager */,
 				714E268D25176EF000875187 /* Entity */,
 				714E263025173AAA00875187 /* DemoVideoFiles */,
@@ -581,82 +532,6 @@
 				714E26942517700A00875187 /* VideoManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		7157F5F72518DD09005463E4 /* DLGPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				7157F5F82518DD09005463E4 /* codec */,
-				7157F5FD2518DD09005463E4 /* DLGPlayer.m */,
-				7157F5FE2518DD09005463E4 /* frame */,
-				7157F6092518DD09005463E4 /* DLGPlayerViewController.m */,
-				7157F60A2518DD09005463E4 /* common */,
-				7157F60E2518DD09005463E4 /* view */,
-				7157F6112518DD09005463E4 /* DLGPlayer.h */,
-				7157F6122518DD09005463E4 /* resource */,
-				7157F61C2518DD09005463E4 /* DLGPlayerViewController.h */,
-			);
-			path = DLGPlayer;
-			sourceTree = "<group>";
-		};
-		7157F5F82518DD09005463E4 /* codec */ = {
-			isa = PBXGroup;
-			children = (
-				7157F5F92518DD09005463E4 /* DLGPlayerDecoder.m */,
-				7157F5FA2518DD09005463E4 /* DLGPlayerAudioManager.m */,
-				7157F5FB2518DD09005463E4 /* DLGPlayerDecoder.h */,
-				7157F5FC2518DD09005463E4 /* DLGPlayerAudioManager.h */,
-			);
-			path = codec;
-			sourceTree = "<group>";
-		};
-		7157F5FE2518DD09005463E4 /* frame */ = {
-			isa = PBXGroup;
-			children = (
-				7157F5FF2518DD09005463E4 /* DLGPlayerVideoYUVFrame.h */,
-				7157F6002518DD09005463E4 /* DLGPlayerVideoFrame.h */,
-				7157F6012518DD09005463E4 /* DLGPlayerVideoRGBFrame.m */,
-				7157F6022518DD09005463E4 /* DLGPlayerAudioFrame.m */,
-				7157F6032518DD09005463E4 /* DLGPlayerFrame.h */,
-				7157F6042518DD09005463E4 /* DLGPlayerVideoRGBFrame.h */,
-				7157F6052518DD09005463E4 /* DLGPlayerVideoFrame.m */,
-				7157F6062518DD09005463E4 /* DLGPlayerVideoYUVFrame.m */,
-				7157F6072518DD09005463E4 /* DLGPlayerAudioFrame.h */,
-				7157F6082518DD09005463E4 /* DLGPlayerFrame.m */,
-			);
-			path = frame;
-			sourceTree = "<group>";
-		};
-		7157F60A2518DD09005463E4 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				7157F60B2518DD09005463E4 /* DLGPlayerDef.h */,
-				7157F60C2518DD09005463E4 /* DLGPlayerUtils.h */,
-				7157F60D2518DD09005463E4 /* DLGPlayerUtils.m */,
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
-		7157F60E2518DD09005463E4 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				7157F60F2518DD09005463E4 /* DLGPlayerView.m */,
-				7157F6102518DD09005463E4 /* DLGPlayerView.h */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		7157F6122518DD09005463E4 /* resource */ = {
-			isa = PBXGroup;
-			children = (
-				7157F6132518DD09005463E4 /* DLGPlayerStrings.strings */,
-				7157F6162518DD09005463E4 /* DLGPlayerRotationScaleVertexShader.glsl */,
-				7157F6172518DD09005463E4 /* DLGPlayerYUVFragmentShader.glsl */,
-				7157F6182518DD09005463E4 /* DLGPlayerRGBFragmentShader.glsl */,
-				7157F61A2518DD09005463E4 /* DLGPlayerRotationVertexShader.glsl */,
-				7157F61B2518DD09005463E4 /* DLGPlayerVertexShader.glsl */,
-			);
-			path = resource;
 			sourceTree = "<group>";
 		};
 		7157F6312518DD20005463E4 /* Externals */ = {
@@ -1130,21 +1005,16 @@
 				714E264B25173AC800875187 /* TEST0092.avi in Resources */,
 				714E25D22517265400875187 /* LaunchScreen.storyboard in Resources */,
 				714E264525173AC800875187 /* TEST0514.avi in Resources */,
-				7157F62C2518DD09005463E4 /* DLGPlayerRotationVertexShader.glsl in Resources */,
 				714E264625173AC800875187 /* TEST0356.avi in Resources */,
 				714E264D25173AC800875187 /* TEST0510.avi in Resources */,
 				7157F7032518DD20005463E4 /* README.txt in Resources */,
-				7157F6282518DD09005463E4 /* DLGPlayerStrings.strings in Resources */,
 				714E264825173AC800875187 /* TEST0351.avi in Resources */,
 				714E25CF2517265400875187 /* Assets.xcassets in Resources */,
-				7157F62D2518DD09005463E4 /* DLGPlayerVertexShader.glsl in Resources */,
-				7157F6292518DD09005463E4 /* DLGPlayerRotationScaleVertexShader.glsl in Resources */,
 				714E265025173AC800875187 /* TEST0355.avi in Resources */,
 				714E265525173AC800875187 /* TEST0512.avi in Resources */,
 				714E264925173AC800875187 /* TEST0053.avi in Resources */,
 				714E264E25173AC800875187 /* TEST0093.avi in Resources */,
 				714E265825173AC800875187 /* TEST0513.avi in Resources */,
-				7157F62A2518DD09005463E4 /* DLGPlayerYUVFragmentShader.glsl in Resources */,
 				714E265625173AC800875187 /* TEST0353.avi in Resources */,
 				714E264A25173AC800875187 /* TEST0352.avi in Resources */,
 				714E264C25173AC800875187 /* TEST0055.avi in Resources */,
@@ -1155,7 +1025,6 @@
 				714E265425173AC800875187 /* TEST0509.avi in Resources */,
 				714E265325173AC800875187 /* TEST0511.avi in Resources */,
 				714E264725173AC800875187 /* TEST0598.avi in Resources */,
-				7157F62B2518DD09005463E4 /* DLGPlayerRGBFragmentShader.glsl in Resources */,
 				714E265725173AC800875187 /* TEST0056.avi in Resources */,
 				714E265125173AC800875187 /* TEST0094.avi in Resources */,
 			);
@@ -1182,26 +1051,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7157F6242518DD09005463E4 /* DLGPlayerFrame.m in Sources */,
 				7157F7072518DD20005463E4 /* HTTPErrorResponse.m in Sources */,
 				7157F7182518DD20005463E4 /* GCDAsyncUdpSocket.m in Sources */,
 				714E268F25176F0500875187 /* VideoEntity.swift in Sources */,
-				7157F6222518DD09005463E4 /* DLGPlayerVideoFrame.m in Sources */,
 				714E260525172E8900875187 /* VideoThumbViewController.swift in Sources */,
-				7157F61F2518DD09005463E4 /* DLGPlayer.m in Sources */,
 				7157F7052518DD20005463E4 /* DDAbstractDatabaseLogger.m in Sources */,
-				7157F6252518DD09005463E4 /* DLGPlayerViewController.m in Sources */,
 				7157F7082518DD20005463E4 /* HTTPDataResponse.m in Sources */,
 				7157F7172518DD20005463E4 /* HTTPServer.m in Sources */,
 				714E26952517700A00875187 /* VideoManager.swift in Sources */,
-				7157F61D2518DD09005463E4 /* DLGPlayerDecoder.m in Sources */,
-				7157F61E2518DD09005463E4 /* DLGPlayerAudioManager.m in Sources */,
 				7157F7152518DD20005463E4 /* DDData.m in Sources */,
 				7157F7112518DD20005463E4 /* MultipartFormDataParser.m in Sources */,
 				7157F7782518EE34005463E4 /* VIdeoPlayer.swift in Sources */,
 				7157F82B2518FC6B005463E4 /* XYQMovieObject.m in Sources */,
 				7157F70F2518DD20005463E4 /* WebSocket.m in Sources */,
-				7157F6262518DD09005463E4 /* DLGPlayerUtils.m in Sources */,
 				7157F7132518DD20005463E4 /* HTTPAuthenticationRequest.m in Sources */,
 				7157F7102518DD20005463E4 /* MultipartMessageHeaderField.m in Sources */,
 				7157F7022518DD20005463E4 /* DDMultiFormatter.m in Sources */,
@@ -1217,17 +1079,13 @@
 				7157F7062518DD20005463E4 /* DDFileLogger.m in Sources */,
 				7157F70C2518DD20005463E4 /* HTTPRedirectResponse.m in Sources */,
 				7157F6FF2518DD20005463E4 /* DDASLLogger.m in Sources */,
-				7157F6202518DD09005463E4 /* DLGPlayerVideoRGBFrame.m in Sources */,
 				7157F7002518DD20005463E4 /* DDContextFilterLogFormatter.m in Sources */,
 				714E2613251730B800875187 /* VideoThumbPresenter.swift in Sources */,
 				7157F70D2518DD20005463E4 /* HTTPMessage.m in Sources */,
 				7157F7042518DD20005463E4 /* DDLog.m in Sources */,
-				7157F6212518DD09005463E4 /* DLGPlayerAudioFrame.m in Sources */,
-				7157F6232518DD09005463E4 /* DLGPlayerVideoYUVFrame.m in Sources */,
 				7157F7122518DD20005463E4 /* MultipartMessageHeader.m in Sources */,
 				7157F70A2518DD20005463E4 /* HTTPFileResponse.m in Sources */,
 				7157F7142518DD20005463E4 /* DDNumber.m in Sources */,
-				7157F6272518DD09005463E4 /* DLGPlayerView.m in Sources */,
 				714E261E2517315F00875187 /* VideoThumbCollectionViewCell.swift in Sources */,
 				714E262C25173A3000875187 /* VideoThumbInteractor.swift in Sources */,
 				7157F7192518DD20005463E4 /* GCDAsyncSocket.m in Sources */,
@@ -1280,16 +1138,6 @@
 				714E25D12517265400875187 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		7157F6132518DD09005463E4 /* DLGPlayerStrings.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7157F6142518DD09005463E4 /* zh-Hans */,
-				7157F6152518DD09005463E4 /* en */,
-				7157F6192518DD09005463E4 /* Base */,
-			);
-			name = DLGPlayerStrings.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
