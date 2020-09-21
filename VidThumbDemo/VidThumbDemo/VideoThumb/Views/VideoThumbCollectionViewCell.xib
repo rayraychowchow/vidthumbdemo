@@ -19,7 +19,18 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmw-n5-ymv">
                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="94"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-ZL-seD">
+                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="94"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gXD-ZL-seD" firstAttribute="top" secondItem="bmw-n5-ymv" secondAttribute="top" id="aJ4-IZ-8iY"/>
+                            <constraint firstAttribute="bottom" secondItem="gXD-ZL-seD" secondAttribute="bottom" id="c78-y8-QvK"/>
+                            <constraint firstItem="gXD-ZL-seD" firstAttribute="leading" secondItem="bmw-n5-ymv" secondAttribute="leading" id="gel-TH-zCK"/>
+                            <constraint firstAttribute="trailing" secondItem="gXD-ZL-seD" secondAttribute="trailing" id="pvm-de-YMV"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -31,6 +42,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="260" height="103"/>
             <connections>
+                <outlet property="imageView" destination="gXD-ZL-seD" id="c5O-6y-MLJ"/>
                 <outlet property="videoView" destination="bmw-n5-ymv" id="HxV-Yh-BE3"/>
             </connections>
             <point key="canvasLocation" x="313.04347826086956" y="59.263392857142854"/>

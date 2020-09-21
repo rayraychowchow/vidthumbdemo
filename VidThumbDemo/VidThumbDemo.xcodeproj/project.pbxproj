@@ -108,6 +108,7 @@
 		7157F74F2518E042005463E4 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7157F6B42518DD20005463E4 /* libswscale.a */; };
 		7157F7722518E590005463E4 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7157F7712518E590005463E4 /* Metal.framework */; };
 		7157F7782518EE34005463E4 /* VIdeoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157F7772518EE34005463E4 /* VIdeoPlayer.swift */; };
+		7157F82B2518FC6B005463E4 /* XYQMovieObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F8292518FC6B005463E4 /* XYQMovieObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -392,6 +393,8 @@
 		7157F7642518E1BA005463E4 /* VidThumbDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VidThumbDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7157F7712518E590005463E4 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		7157F7772518EE34005463E4 /* VIdeoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIdeoPlayer.swift; sourceTree = "<group>"; };
+		7157F8292518FC6B005463E4 /* XYQMovieObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYQMovieObject.m; sourceTree = "<group>"; };
+		7157F82A2518FC6B005463E4 /* XYQMovieObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYQMovieObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,6 +466,7 @@
 		714E25C42517265200875187 /* VidThumbDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7157F8282518FC45005463E4 /* VideoObject */,
 				7157F7762518EE24005463E4 /* VIdeoPlayer */,
 				7157F6312518DD20005463E4 /* Externals */,
 				7157F5F72518DD09005463E4 /* DLGPlayer */,
@@ -1003,6 +1007,15 @@
 			path = VIdeoPlayer;
 			sourceTree = "<group>";
 		};
+		7157F8282518FC45005463E4 /* VideoObject */ = {
+			isa = PBXGroup;
+			children = (
+				7157F82A2518FC6B005463E4 /* XYQMovieObject.h */,
+				7157F8292518FC6B005463E4 /* XYQMovieObject.m */,
+			);
+			path = VideoObject;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1186,6 +1199,7 @@
 				7157F7152518DD20005463E4 /* DDData.m in Sources */,
 				7157F7112518DD20005463E4 /* MultipartFormDataParser.m in Sources */,
 				7157F7782518EE34005463E4 /* VIdeoPlayer.swift in Sources */,
+				7157F82B2518FC6B005463E4 /* XYQMovieObject.m in Sources */,
 				7157F70F2518DD20005463E4 /* WebSocket.m in Sources */,
 				7157F6262518DD09005463E4 /* DLGPlayerUtils.m in Sources */,
 				7157F7132518DD20005463E4 /* HTTPAuthenticationRequest.m in Sources */,

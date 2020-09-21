@@ -11,3 +11,5 @@
 #import "DLGPlayerVideoFrame.h"
 #import "DLGPlayerFrame.h"
 #import "DLGPlayerView.h"
+
+#import "XYQMovieObject.h"

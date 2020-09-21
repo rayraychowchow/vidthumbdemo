@@ -15,42 +15,68 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
 //    let avplayer = AVPlayer()
 //    let playerLayer = AVPlayerLayer()
     @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     var isDidSetup = false
     var videoEntity: VideoEntity?
     
-    let player = DLGPlayer()
+    let videoObj = XYQMovieObject()
+    var timer: Timer?
+    var sourceObservable: Disposable?
     
     func setupCell(with videoEntity: VideoEntity) {
         doSetupIfNeed()
         self.videoEntity = videoEntity
-        player.open(videoEntity.filePath)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(notifyPlayerOpened), name: NSNotification.Name(rawValue: DLGPlayerNotificationOpened), object: nil)
+        videoObj.replaceTheResources(videoEntity.filePath)
+        videoObj.seekTime(0.0)
+        
+        startTimer()
+        
 //        [nc addObserver:self selector:@selector(notifyPlayerOpened:) name:DLGPlayerNotificationOpened object:self.player];
         
 //        playVideo()
 //        player.play()
     }
     
+    func startTimer() {
+        resetTimer()
+//        timer = Timer(timeInterval: 1 / videoObj.fps, repeats: true, block: { _ in
+//            if self.videoObj.stepFrame() {
+//                self.resetTimer()
+//            }
+//            self.imageView.image = self.videoObj.currentImage
+//        })
+//        let second = (1 / videoObj.fps) * 1000
+        sourceObservable = Observable<Int>
+            .interval(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                guard let this = self else { return }
+                if !this.videoObj.stepFrame() {
+                    this.resetTimer()
+                    return
+                }
+                this.imageView.image = this.videoObj.currentImage
+            })
+    }
+    
+    func resetTimer() {
+        timer?.invalidate()
+        timer = nil
+        sourceObservable?.dispose()
+    }
+    
     func doSetupIfNeed() {
         guard !isDidSetup else { return }
+        imageView.contentMode = .scaleAspectFit
 //        avplayer.isMuted = true
 //        playerLayer.player = avplayer
 //        playerLayer.frame = videoView.frame
 //        videoView.layer.addSublayer(playerLayer)
-        
-        if let playerView = player.playerView {
-            videoView.addSubview(playerView)
-            playerView.translatesAutoresizingMaskIntoConstraints = false
-            playerView.topAnchor.constraint(equalTo: videoView.topAnchor).isActive = true
-            playerView.bottomAnchor.constraint(equalTo: videoView.bottomAnchor).isActive = true
-            playerView.leadingAnchor.constraint(equalTo: videoView.leadingAnchor).isActive = true
-            playerView.trailingAnchor.constraint(equalTo: videoView.trailingAnchor).isActive = true
-        }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        resetTimer()
         pauseVideo()
         
 //        NotificationCenter.default.removeObserver(self)
@@ -74,8 +100,6 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     }
     
     @objc func notifyPlayerOpened() {
-        if player.opened {
-            player.play()
-        }
+        
     }
 }
