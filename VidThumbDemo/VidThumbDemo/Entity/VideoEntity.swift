@@ -13,4 +13,5 @@ struct VideoEntity {
     let filePath: String
     let asset: AVAsset
     var currentPlayTime = CMTime.zero
+    var currentTime: Double = 0.0
 }

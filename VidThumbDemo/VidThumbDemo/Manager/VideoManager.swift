@@ -10,13 +10,13 @@ import AVKit
 
 class VideoManager {
     static let shared = VideoManager()
-    var videosDic: [String: CMTime] = [:]
+    var videosDic: [String: Double] = [:]
     
-    func getPlayTime(videoEntity: VideoEntity) -> CMTime {
-        return videosDic[videoEntity.fileName] ?? CMTime.zero
+    func getPlayTime(videoEntity: VideoEntity) -> Double {
+        return videosDic[videoEntity.fileName] ?? 0.0
     }
     
     func setPlayTime(videoEntity: VideoEntity) {
-        videosDic[videoEntity.fileName] = videoEntity.currentPlayTime
+        videosDic[videoEntity.fileName] = videoEntity.currentTime
     }
 }
