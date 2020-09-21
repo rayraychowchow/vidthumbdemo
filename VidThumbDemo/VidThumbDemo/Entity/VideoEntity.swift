@@ -10,6 +10,7 @@ import AVKit
 
 struct VideoEntity {
     let fileName: String
+    let filePath: String
     let asset: AVAsset
     var currentPlayTime = CMTime.zero
 }

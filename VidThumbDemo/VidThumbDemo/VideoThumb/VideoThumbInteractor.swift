@@ -23,7 +23,7 @@ class VideoThumbInteractor: BaseInteractor {
                 
                 for fileName in documentList {
                     if let videoPath = Bundle.main.path(forResource: fileName, ofType: nil) {
-                        avAssets.append(VideoEntity(fileName: fileName, asset: AVAsset(url: URL(fileURLWithPath: videoPath))))
+                        avAssets.append(VideoEntity(fileName: fileName, filePath: videoPath, asset: AVAsset(url: URL(fileURLWithPath: videoPath))))
                     }
                 }
                 
