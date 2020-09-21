@@ -25,6 +25,9 @@ class VideoThumbInteractor: BaseInteractor {
                     if let videoPath = Bundle.main.path(forResource: fileName, ofType: nil) {
                         avAssets.append(VideoEntity(fileName: fileName, filePath: videoPath, asset: AVAsset(url: URL(fileURLWithPath: videoPath))))
                     }
+                    if avAssets.count > 4 {
+                        break
+                    }
                 }
                 
                 observer.onNext(avAssets)
