@@ -51,6 +51,7 @@
     isReleaseResources = NO;
     AVCodec *pCodec;
     // 注册所有解码器
+    
     avcodec_register_all();
     av_register_all();
     avformat_network_init();
@@ -133,7 +134,11 @@ initError:
     [self initializeResources:[moviePath UTF8String]];
 }
 - (void)redialPaly {
-    [self initializeResources:[self.cruutenPath UTF8String]];
+    if (isReleaseResources) {
+        [self initializeResources:[self.cruutenPath UTF8String]];
+    } else {
+        [self seekTime:0.0];
+    }
 }
 #pragma mark ------------------------------------
 #pragma mark  重写属性访问方法
@@ -169,7 +174,7 @@ initError:
 #pragma mark - 内部方法
 - (UIImage *)imageFromAVPicture
 {
-    avpicture_free(&picture);
+    av_freep(&picture);
     avpicture_alloc(&picture, AV_PIX_FMT_RGB24, _outputWidth, _outputHeight);
     struct SwsContext * imgConvertCtx = sws_getContext(XYQFrame->width,
                                                        XYQFrame->height,
@@ -225,7 +230,7 @@ initError:
 //    SJLogFunc
     isReleaseResources = YES;
     // 释放RGB
-    avpicture_free(&picture);
+    av_freep(&picture);
     // 释放frame
     av_packet_unref(&packet);
     // 释放YUV frame

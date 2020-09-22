@@ -19,12 +19,11 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     
     let videoObj = XYQMovieObject()
     var sourceObservable: Disposable?
+    var isPLaying = false
     
     func setupCell(with videoEntity: VideoEntity) {
         doSetupIfNeed()
         self.videoEntity = videoEntity
-        
-        playVideo()
     }
     
     func startTimer() {
@@ -32,7 +31,7 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
         sourceObservable = Observable<Int>
             .interval(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
-                guard let this = self else { return }
+                guard let this = self, this.isPLaying else { return }
                 if !this.videoObj.stepFrame() {
                     this.videoObj.redialPaly()
                     return
@@ -58,6 +57,7 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     
     func pauseVideo() {
         resetTimer()
+        isPLaying = false
         if let ve = videoEntity {
             VideoManager.shared.setPlayTime(videoEntity: ve)
         }
@@ -65,6 +65,7 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     
     func playVideo() {
         if let ve = videoEntity {
+            isPLaying = true
             videoObj.replaceTheResources(ve.filePath)
             videoObj.seekTime(VideoManager.shared.getPlayTime(videoEntity: ve))
             startTimer()
