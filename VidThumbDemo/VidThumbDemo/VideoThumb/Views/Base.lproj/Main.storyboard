@@ -1,13 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z3G-WM-h8M">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="u7S-g7-tZA">
+            <objects>
+                <viewController id="s2V-kU-EJT" customClass="HomeViewController" customModule="VidThumbDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AX3-yJ-v4M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak4-pj-tai">
+                                <rect key="frame" x="20" y="108" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mGP-PI-DlW"/>
+                                </constraints>
+                                <state key="normal" title="Start Loop"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="9sJ-uW-gAJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRI-nI-YFx">
+                                <rect key="frame" x="20" y="228" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Iwz-r3-KlO"/>
+                                </constraints>
+                                <state key="normal" title="Import and Relace files"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ms3-u1-cHY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ms3-u1-cHY" firstAttribute="trailing" secondItem="BRI-nI-YFx" secondAttribute="trailing" constant="20" id="4w3-ta-01C"/>
+                            <constraint firstItem="Ak4-pj-tai" firstAttribute="leading" secondItem="ms3-u1-cHY" secondAttribute="leading" constant="20" id="B3G-a0-8FK"/>
+                            <constraint firstItem="Ak4-pj-tai" firstAttribute="top" secondItem="ms3-u1-cHY" secondAttribute="top" constant="20" id="NXo-Ed-ou1"/>
+                            <constraint firstItem="ms3-u1-cHY" firstAttribute="trailing" secondItem="Ak4-pj-tai" secondAttribute="trailing" constant="20" id="bf9-DK-Z3W"/>
+                            <constraint firstItem="BRI-nI-YFx" firstAttribute="leading" secondItem="ms3-u1-cHY" secondAttribute="leading" constant="20" id="iVT-DD-8zC"/>
+                            <constraint firstItem="BRI-nI-YFx" firstAttribute="top" secondItem="Ak4-pj-tai" secondAttribute="bottom" constant="20" id="oEP-1i-b7H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vhb-bm-Lpn"/>
+                    <connections>
+                        <outlet property="btnImport" destination="BRI-nI-YFx" id="5Yu-ww-3Ju"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIy-lB-V08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27.536231884057973" y="-37.5"/>
+        </scene>
         <!--Video Thumb View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,7 +64,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6dQ-Im-E18">
-                                <rect key="frame" x="10" y="44" width="394" height="818"/>
+                                <rect key="frame" x="10" y="88" width="394" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1is-Xx-7Du">
                                     <size key="itemSize" width="128" height="128"/>
@@ -37,13 +84,43 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dQ-Im-E18" secondAttribute="trailing" constant="10" id="pG7-7g-8OR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FvN-BR-9Rc">
+                        <barButtonItem key="leftBarButtonItem" title="Back To Home" id="N65-yl-cRN">
+                            <connections>
+                                <action selector="btnBackTapped:" destination="BYZ-38-t0r" id="vaD-y7-rfP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="videoThumbCollectionView" destination="6dQ-Im-E18" id="zGp-Bk-t77"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="-37"/>
+            <point key="canvasLocation" x="763.768115942029" y="-37.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DCI-S6-N7W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z3G-WM-h8M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rtl-3j-eFv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s2V-kU-EJT" kind="relationship" relationship="rootViewController" id="rNu-vd-7b7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NkC-Eb-vQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-939.13043478260875" y="-38.169642857142854"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -10,8 +10,10 @@ import UIKit
 import RxSwift
 import AVKit
 
-class VideoThumbViewController: BaseViewController<VideoThumbInteractor, VideoThumbPresenter, BaseRouter> {
+class VideoThumbViewController: VidThumbViewController<VideoThumbInteractor, VideoThumbPresenter, BaseRouter> {
     @IBOutlet weak var videoThumbCollectionView: UICollectionView!
+    static let stopAllVideo = PublishSubject<Bool>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.getDemoVideos().subscribe().disposed(by: disposeBag)
@@ -54,5 +56,11 @@ class VideoThumbViewController: BaseViewController<VideoThumbInteractor, VideoTh
                 }
             }.disposed(by: disposeBag)
 
+    }
+    
+    @IBAction func btnBackTapped(_ sender: Any) {
+        VideoThumbViewController.stopAllVideo.onNext(true)
+        presenter.cleanVideos()
+        navigationController?.popViewController(animated: true)
     }
 }

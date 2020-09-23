@@ -9,11 +9,12 @@ import Foundation
 import UIKit
 import RxSwift
 
-class BaseViewController<I: BaseInteractor, P: BasePresenter<I, R>, R: BaseRouter>: UIViewController {
+class VidThumbViewController<I: BaseInteractor, P: BasePresenter<I, R>, R: BaseRouter>: BaseViewController {
     lazy var presenter = P()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
+        presenter.router.viewController = self
         super.viewDidLoad()
         setupUI()
         setupRX()
@@ -35,5 +36,22 @@ class BaseInteractor {
 }
 
 class BaseRouter {
+    var viewController: BaseViewController?
     required init() {}
+}
+
+class BaseViewController: UIViewController {
+    
+}
+
+extension BaseViewController: UIDocumentPickerDelegate {
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        
+    }
+}
+
+extension BaseViewController: UIDocumentBrowserViewControllerDelegate {
+    func documentBrowser(_ controller: UIDocumentBrowserViewController, didImportDocumentAt sourceURL: URL, toDestinationURL destinationURL: URL) {
+        
+    }
 }

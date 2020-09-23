@@ -21,6 +21,8 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     var sourceObservable: Disposable?
     var isPLaying = false
     
+    let disposeBag = DisposeBag()
+    
     func setupCell(with videoEntity: VideoEntity) {
         doSetupIfNeed()
         self.videoEntity = videoEntity
@@ -48,6 +50,9 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     func doSetupIfNeed() {
         guard !isDidSetup else { return }
         imageView.contentMode = .scaleAspectFit
+        VideoThumbViewController.stopAllVideo.subscribe(onNext: { [weak self] _ in
+            self?.pauseVideo()
+        }).disposed(by: disposeBag)
     }
     
     override func prepareForReuse() {

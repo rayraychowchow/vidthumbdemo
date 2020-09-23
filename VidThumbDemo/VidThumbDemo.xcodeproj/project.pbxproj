@@ -63,6 +63,12 @@
 		7157F74F2518E042005463E4 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7157F6B42518DD20005463E4 /* libswscale.a */; };
 		7157F7722518E590005463E4 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7157F7712518E590005463E4 /* Metal.framework */; };
 		7157F82B2518FC6B005463E4 /* XYQMovieObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7157F8292518FC6B005463E4 /* XYQMovieObject.m */; };
+		7157F861251B759C005463E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157F860251B759C005463E4 /* HomeViewController.swift */; };
+		7157F86B251B75B9005463E4 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157F86A251B75B9005463E4 /* HomeViewPresenter.swift */; };
+		7157F870251B75C5005463E4 /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157F86F251B75C5005463E4 /* HomeViewInteractor.swift */; };
+		7157F878251B7644005463E4 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157F877251B7644005463E4 /* HomeViewRouter.swift */; };
+		7157F884251B853E005463E4 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7157F883251B853E005463E4 /* UserDefaultManager.swift */; };
+		7157F88A251B93F2005463E4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7157F889251B93F2005463E4 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +265,13 @@
 		7157F7712518E590005463E4 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		7157F8292518FC6B005463E4 /* XYQMovieObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYQMovieObject.m; sourceTree = "<group>"; };
 		7157F82A2518FC6B005463E4 /* XYQMovieObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYQMovieObject.h; sourceTree = "<group>"; };
+		7157F860251B759C005463E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7157F86A251B75B9005463E4 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		7157F86F251B75C5005463E4 /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
+		7157F877251B7644005463E4 /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
+		7157F87F251B7F94005463E4 /* VidThumbDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VidThumbDemo.entitlements; sourceTree = "<group>"; };
+		7157F883251B853E005463E4 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		7157F889251B93F2005463E4 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7157F88A251B93F2005463E4 /* CloudKit.framework in Frameworks */,
 				7157F74D2518E042005463E4 /* libavutil.a in Frameworks */,
 				7157F74B2518E042005463E4 /* libavfilter.a in Frameworks */,
 				7157F7722518E590005463E4 /* Metal.framework in Frameworks */,
@@ -330,6 +344,8 @@
 		714E25C42517265200875187 /* VidThumbDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7157F87F251B7F94005463E4 /* VidThumbDemo.entitlements */,
+				7157F85F251B758D005463E4 /* Home */,
 				7157F8282518FC45005463E4 /* VideoObject */,
 				7157F6312518DD20005463E4 /* Externals */,
 				714E269325176FF900875187 /* Manager */,
@@ -441,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				714E26942517700A00875187 /* VideoManager.swift */,
+				7157F883251B853E005463E4 /* UserDefaultManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -655,6 +672,7 @@
 		7157F71D2518DD5F005463E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7157F889251B93F2005463E4 /* CloudKit.framework */,
 				7157F7712518E590005463E4 /* Metal.framework */,
 				7157F7382518DDE9005463E4 /* libbz2.tbd */,
 				7157F7332518DDC0005463E4 /* libiconv.tbd */,
@@ -678,6 +696,17 @@
 				7157F8292518FC6B005463E4 /* XYQMovieObject.m */,
 			);
 			path = VideoObject;
+			sourceTree = "<group>";
+		};
+		7157F85F251B758D005463E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7157F860251B759C005463E4 /* HomeViewController.swift */,
+				7157F86A251B75B9005463E4 /* HomeViewPresenter.swift */,
+				7157F86F251B75C5005463E4 /* HomeViewInteractor.swift */,
+				7157F877251B7644005463E4 /* HomeViewRouter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -845,8 +874,13 @@
 				7157F82B2518FC6B005463E4 /* XYQMovieObject.m in Sources */,
 				714E260B25172EAA00875187 /* BaseViewController.swift in Sources */,
 				714E25C62517265200875187 /* AppDelegate.swift in Sources */,
+				7157F878251B7644005463E4 /* HomeViewRouter.swift in Sources */,
 				714E26242517317D00875187 /* CustomCellable.swift in Sources */,
+				7157F861251B759C005463E4 /* HomeViewController.swift in Sources */,
+				7157F884251B853E005463E4 /* UserDefaultManager.swift in Sources */,
 				714E2613251730B800875187 /* VideoThumbPresenter.swift in Sources */,
+				7157F870251B75C5005463E4 /* HomeViewInteractor.swift in Sources */,
+				7157F86B251B75B9005463E4 /* HomeViewPresenter.swift in Sources */,
 				714E261E2517315F00875187 /* VideoThumbCollectionViewCell.swift in Sources */,
 				714E262C25173A3000875187 /* VideoThumbInteractor.swift in Sources */,
 			);
@@ -1024,8 +1058,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VidThumbDemo/VidThumbDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B44JQ4HGJ4;
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/VidThumbDemo/Externals/ffmpeg/include";
 				INFOPLIST_FILE = VidThumbDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1037,6 +1074,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VidThumbDemo/Externals/ffmpeg/lib",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stealthcam.VidThumbDemo.ray;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/VidThumbDemo/VidThumbDemo-Bridging-Header.h";
@@ -1050,8 +1088,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VidThumbDemo/VidThumbDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B44JQ4HGJ4;
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/VidThumbDemo/Externals/ffmpeg/include";
 				INFOPLIST_FILE = VidThumbDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1063,6 +1104,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VidThumbDemo/Externals/ffmpeg/lib",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stealthcam.VidThumbDemo.ray;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/VidThumbDemo/VidThumbDemo-Bridging-Header.h";

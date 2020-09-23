@@ -18,4 +18,8 @@ class VideoThumbPresenter: BasePresenter<VideoThumbInteractor, BaseRouter> {
             self?.avAssets.accept(demoVideos)
         }.map({ _ in true })
     }
+    
+    func cleanVideos() {
+        avAssets.accept([])
+    }
 }

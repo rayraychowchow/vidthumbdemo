@@ -49,4 +49,5 @@
 
 -(NSString*)getFilePath;
 
+- (void)releaseResources;
 @end
