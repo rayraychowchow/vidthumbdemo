@@ -22,26 +22,6 @@
 		714E261E2517315F00875187 /* VideoThumbCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E261D2517315F00875187 /* VideoThumbCollectionViewCell.swift */; };
 		714E26242517317D00875187 /* CustomCellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E26232517317D00875187 /* CustomCellable.swift */; };
 		714E262C25173A3000875187 /* VideoThumbInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E262B25173A3000875187 /* VideoThumbInteractor.swift */; };
-		714E264525173AC800875187 /* TEST0514.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263125173AC800875187 /* TEST0514.avi */; };
-		714E264625173AC800875187 /* TEST0356.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263225173AC800875187 /* TEST0356.avi */; };
-		714E264725173AC800875187 /* TEST0598.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263325173AC800875187 /* TEST0598.avi */; };
-		714E264825173AC800875187 /* TEST0351.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263425173AC800875187 /* TEST0351.avi */; };
-		714E264925173AC800875187 /* TEST0053.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263525173AC800875187 /* TEST0053.avi */; };
-		714E264A25173AC800875187 /* TEST0352.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263625173AC800875187 /* TEST0352.avi */; };
-		714E264B25173AC800875187 /* TEST0092.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263725173AC800875187 /* TEST0092.avi */; };
-		714E264C25173AC800875187 /* TEST0055.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263825173AC800875187 /* TEST0055.avi */; };
-		714E264D25173AC800875187 /* TEST0510.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263925173AC800875187 /* TEST0510.avi */; };
-		714E264E25173AC800875187 /* TEST0093.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263A25173AC800875187 /* TEST0093.avi */; };
-		714E264F25173AC800875187 /* TEST0054.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263B25173AC800875187 /* TEST0054.avi */; };
-		714E265025173AC800875187 /* TEST0355.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263C25173AC800875187 /* TEST0355.avi */; };
-		714E265125173AC800875187 /* TEST0094.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263D25173AC800875187 /* TEST0094.avi */; };
-		714E265225173AC800875187 /* TEST0354.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263E25173AC800875187 /* TEST0354.avi */; };
-		714E265325173AC800875187 /* TEST0511.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E263F25173AC800875187 /* TEST0511.avi */; };
-		714E265425173AC800875187 /* TEST0509.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264025173AC800875187 /* TEST0509.avi */; };
-		714E265525173AC800875187 /* TEST0512.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264125173AC800875187 /* TEST0512.avi */; };
-		714E265625173AC800875187 /* TEST0353.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264225173AC800875187 /* TEST0353.avi */; };
-		714E265725173AC800875187 /* TEST0056.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264325173AC800875187 /* TEST0056.avi */; };
-		714E265825173AC800875187 /* TEST0513.avi in Resources */ = {isa = PBXBuildFile; fileRef = 714E264425173AC800875187 /* TEST0513.avi */; };
 		714E268F25176F0500875187 /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E268E25176F0500875187 /* VideoEntity.swift */; };
 		714E26952517700A00875187 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E26942517700A00875187 /* VideoManager.swift */; };
 		7157F71F2518DD60005463E4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7157F71E2518DD60005463E4 /* Accelerate.framework */; };
@@ -108,26 +88,6 @@
 		714E261D2517315F00875187 /* VideoThumbCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThumbCollectionViewCell.swift; sourceTree = "<group>"; };
 		714E26232517317D00875187 /* CustomCellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellable.swift; sourceTree = "<group>"; };
 		714E262B25173A3000875187 /* VideoThumbInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoThumbInteractor.swift; sourceTree = "<group>"; };
-		714E263125173AC800875187 /* TEST0514.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0514.avi; sourceTree = "<group>"; };
-		714E263225173AC800875187 /* TEST0356.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0356.avi; sourceTree = "<group>"; };
-		714E263325173AC800875187 /* TEST0598.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0598.avi; sourceTree = "<group>"; };
-		714E263425173AC800875187 /* TEST0351.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0351.avi; sourceTree = "<group>"; };
-		714E263525173AC800875187 /* TEST0053.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0053.avi; sourceTree = "<group>"; };
-		714E263625173AC800875187 /* TEST0352.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0352.avi; sourceTree = "<group>"; };
-		714E263725173AC800875187 /* TEST0092.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0092.avi; sourceTree = "<group>"; };
-		714E263825173AC800875187 /* TEST0055.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0055.avi; sourceTree = "<group>"; };
-		714E263925173AC800875187 /* TEST0510.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0510.avi; sourceTree = "<group>"; };
-		714E263A25173AC800875187 /* TEST0093.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0093.avi; sourceTree = "<group>"; };
-		714E263B25173AC800875187 /* TEST0054.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0054.avi; sourceTree = "<group>"; };
-		714E263C25173AC800875187 /* TEST0355.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0355.avi; sourceTree = "<group>"; };
-		714E263D25173AC800875187 /* TEST0094.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0094.avi; sourceTree = "<group>"; };
-		714E263E25173AC800875187 /* TEST0354.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0354.avi; sourceTree = "<group>"; };
-		714E263F25173AC800875187 /* TEST0511.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0511.avi; sourceTree = "<group>"; };
-		714E264025173AC800875187 /* TEST0509.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0509.avi; sourceTree = "<group>"; };
-		714E264125173AC800875187 /* TEST0512.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0512.avi; sourceTree = "<group>"; };
-		714E264225173AC800875187 /* TEST0353.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0353.avi; sourceTree = "<group>"; };
-		714E264325173AC800875187 /* TEST0056.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0056.avi; sourceTree = "<group>"; };
-		714E264425173AC800875187 /* TEST0513.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = TEST0513.avi; sourceTree = "<group>"; };
 		714E268E25176F0500875187 /* VideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntity.swift; sourceTree = "<group>"; };
 		714E26942517700A00875187 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		7157F6352518DD20005463E4 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
@@ -350,7 +310,6 @@
 				7157F6312518DD20005463E4 /* Externals */,
 				714E269325176FF900875187 /* Manager */,
 				714E268D25176EF000875187 /* Entity */,
-				714E263025173AAA00875187 /* DemoVideoFiles */,
 				714E26222517316900875187 /* Protocol */,
 				714E260925172E9600875187 /* Base ViewController */,
 				714E25C52517265200875187 /* AppDelegate.swift */,
@@ -416,33 +375,6 @@
 				714E26232517317D00875187 /* CustomCellable.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		714E263025173AAA00875187 /* DemoVideoFiles */ = {
-			isa = PBXGroup;
-			children = (
-				714E263525173AC800875187 /* TEST0053.avi */,
-				714E263B25173AC800875187 /* TEST0054.avi */,
-				714E263825173AC800875187 /* TEST0055.avi */,
-				714E264325173AC800875187 /* TEST0056.avi */,
-				714E263725173AC800875187 /* TEST0092.avi */,
-				714E263A25173AC800875187 /* TEST0093.avi */,
-				714E263D25173AC800875187 /* TEST0094.avi */,
-				714E263425173AC800875187 /* TEST0351.avi */,
-				714E263625173AC800875187 /* TEST0352.avi */,
-				714E264225173AC800875187 /* TEST0353.avi */,
-				714E263E25173AC800875187 /* TEST0354.avi */,
-				714E263C25173AC800875187 /* TEST0355.avi */,
-				714E263225173AC800875187 /* TEST0356.avi */,
-				714E264025173AC800875187 /* TEST0509.avi */,
-				714E263925173AC800875187 /* TEST0510.avi */,
-				714E263F25173AC800875187 /* TEST0511.avi */,
-				714E264125173AC800875187 /* TEST0512.avi */,
-				714E264425173AC800875187 /* TEST0513.avi */,
-				714E263125173AC800875187 /* TEST0514.avi */,
-				714E263325173AC800875187 /* TEST0598.avi */,
-			);
-			path = DemoVideoFiles;
 			sourceTree = "<group>";
 		};
 		714E268D25176EF000875187 /* Entity */ = {
@@ -820,30 +752,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				714E264B25173AC800875187 /* TEST0092.avi in Resources */,
 				714E25D22517265400875187 /* LaunchScreen.storyboard in Resources */,
-				714E264525173AC800875187 /* TEST0514.avi in Resources */,
-				714E264625173AC800875187 /* TEST0356.avi in Resources */,
-				714E264D25173AC800875187 /* TEST0510.avi in Resources */,
-				714E264825173AC800875187 /* TEST0351.avi in Resources */,
 				714E25CF2517265400875187 /* Assets.xcassets in Resources */,
-				714E265025173AC800875187 /* TEST0355.avi in Resources */,
-				714E265525173AC800875187 /* TEST0512.avi in Resources */,
-				714E264925173AC800875187 /* TEST0053.avi in Resources */,
-				714E264E25173AC800875187 /* TEST0093.avi in Resources */,
-				714E265825173AC800875187 /* TEST0513.avi in Resources */,
-				714E265625173AC800875187 /* TEST0353.avi in Resources */,
-				714E264A25173AC800875187 /* TEST0352.avi in Resources */,
-				714E264C25173AC800875187 /* TEST0055.avi in Resources */,
-				714E264F25173AC800875187 /* TEST0054.avi in Resources */,
 				714E25CD2517265200875187 /* Main.storyboard in Resources */,
-				714E265225173AC800875187 /* TEST0354.avi in Resources */,
 				714E26192517315600875187 /* VideoThumbCollectionViewCell.xib in Resources */,
-				714E265425173AC800875187 /* TEST0509.avi in Resources */,
-				714E265325173AC800875187 /* TEST0511.avi in Resources */,
-				714E264725173AC800875187 /* TEST0598.avi in Resources */,
-				714E265725173AC800875187 /* TEST0056.avi in Resources */,
-				714E265125173AC800875187 /* TEST0094.avi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
