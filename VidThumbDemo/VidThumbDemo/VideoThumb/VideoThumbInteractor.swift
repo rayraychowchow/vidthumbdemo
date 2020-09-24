@@ -15,7 +15,7 @@ class VideoThumbInteractor: BaseInteractor {
     func getDemoVideos() -> Observable<[VideoEntity]> {
         return Observable.create { [weak self] observer in
             guard let this = self else { return Disposables.create{} }
-            let path = FileManager.default.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("videos").path ?? Bundle.main.bundlePath
+            let path = this.fileManager.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("videos").path ?? Bundle.main.bundlePath
             
             do {
                 var documentList = try this.fileManager.contentsOfDirectory(atPath: path)
@@ -25,9 +25,10 @@ class VideoThumbInteractor: BaseInteractor {
                 var avAssets: [VideoEntity] = []
                 
                 for fileName in documentList {
-                    if let videoPath = Bundle.main.path(forResource: fileName, ofType: nil) {
-                        avAssets.append(VideoEntity(fileName: fileName, filePath: videoPath, asset: AVAsset(url: URL(fileURLWithPath: videoPath))))
-                    }
+//                    if let videoPath = Bundle.main.path(forResource: fileName, ofType: nil) {
+                    let videoPath = path + "/" + fileName
+                    avAssets.append(VideoEntity(fileName: fileName, filePath: videoPath, asset: AVAsset(url: URL(fileURLWithPath: videoPath))))
+//                    }
                 }
                 
                 observer.onNext(avAssets)

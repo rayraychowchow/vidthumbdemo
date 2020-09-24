@@ -93,9 +93,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="videoThumbCollectionView" destination="6dQ-Im-E18" id="zGp-Bk-t77"/>
+                        <segue destination="jhL-8M-DGo" kind="unwind" identifier="backToHome" unwindAction="unwindToHome:" id="yaO-6Q-Ldc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="jhL-8M-DGo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="763.768115942029" y="-37.5"/>
         </scene>

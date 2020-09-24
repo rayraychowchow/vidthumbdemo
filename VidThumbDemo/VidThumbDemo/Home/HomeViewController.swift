@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class HomeViewController: VidThumbViewController<HomeViewInteractor, HomeViewPresenter, HomeViewRouter> {
+class HomeViewController: HomeBaseVidThumbViewController<HomeViewInteractor, HomeViewPresenter, HomeViewRouter> {
     @IBOutlet weak var btnImport: UIButton!
  
     override func viewDidLoad() {
@@ -18,11 +18,30 @@ class HomeViewController: VidThumbViewController<HomeViewInteractor, HomeViewPre
     override func setupRX() {
         super.setupRX()
         btnImport.rx.tap.subscribe { [weak self] _ in
-            self?.presenter.openFileFolder()
+            guard let this = self else { return }
+            this.presenter.openFileFolder(viewController: this)
         }.disposed(by: disposeBag)
     }
     
     override func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         presenter.saveNewFiles(with: urls)
     }
+}
+
+class HomeBaseVidThumbViewController<I: BaseInteractor, P: BasePresenter<I, R>, R: BaseRouter>: HomeBaseViewController {
+    lazy var presenter = P()
+    let disposeBag = DisposeBag()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        setupRX()
+    }
+    
+    func setupUI() {}
+    func setupRX() {}
+}
+
+class HomeBaseViewController: BaseViewController {
+    @IBAction func unwindToHome(_ unwindSegue: UIStoryboardSegue) {}
 }

@@ -986,7 +986,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VidThumbDemo/Externals/ffmpeg/lib",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stealthcam.VidThumbDemo.ray;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/VidThumbDemo/VidThumbDemo-Bridging-Header.h";
@@ -1016,7 +1016,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/VidThumbDemo/Externals/ffmpeg/lib",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stealthcam.VidThumbDemo.ray;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/VidThumbDemo/VidThumbDemo-Bridging-Header.h";

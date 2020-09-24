@@ -14,7 +14,6 @@ class VidThumbViewController<I: BaseInteractor, P: BasePresenter<I, R>, R: BaseR
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        presenter.router.viewController = self
         super.viewDidLoad()
         setupUI()
         setupRX()
@@ -36,12 +35,11 @@ class BaseInteractor {
 }
 
 class BaseRouter {
-    var viewController: BaseViewController?
     required init() {}
 }
 
 class BaseViewController: UIViewController {
-    
+
 }
 
 extension BaseViewController: UIDocumentPickerDelegate {

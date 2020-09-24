@@ -9,8 +9,8 @@ import Foundation
 
 class HomeViewPresenter: BasePresenter<HomeViewInteractor, HomeViewRouter> {
     
-    func openFileFolder() {
-        router.openFileFolder()
+    func openFileFolder(viewController: BaseViewController) {
+        router.openFileFolder(viewController: viewController)
     }
     
     func saveNewFiles(with url: [URL]) {

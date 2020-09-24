@@ -9,12 +9,10 @@ import Foundation
 import MobileCoreServices
 
 class HomeViewRouter: BaseRouter {
-    func openFileFolder() {
-        if let vc = viewController {
-            let documentPickerController = UIDocumentPickerViewController(documentTypes: [String(kUTTypeAVIMovie)], in: UIDocumentPickerMode.open)
-            documentPickerController.delegate = vc
-            documentPickerController.allowsMultipleSelection = true
-            vc.present(documentPickerController, animated: true, completion: nil)
-        }
+    func openFileFolder(viewController: BaseViewController) {
+        let documentPickerController = UIDocumentPickerViewController(documentTypes: [String(kUTTypeAVIMovie)], in: UIDocumentPickerMode.open)
+        documentPickerController.delegate = viewController
+        documentPickerController.allowsMultipleSelection = true
+        viewController.present(documentPickerController, animated: true, completion: nil)
     }
 }

@@ -50,4 +50,5 @@
 -(NSString*)getFilePath;
 
 - (void)releaseResources;
+-(void) deinitSSSS;
 @end

@@ -241,4 +241,9 @@ initError:
     if (XYQFormatCtx) avformat_close_input(&XYQFormatCtx);
     avformat_network_deinit();
 }
+
+-(void) deinitSSSS {
+    avformat_network_deinit();
+}
+
 @end
