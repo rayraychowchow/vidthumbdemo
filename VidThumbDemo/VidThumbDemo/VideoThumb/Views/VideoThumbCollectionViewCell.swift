@@ -23,19 +23,33 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     
     var disposeBag: DisposeBag = DisposeBag()
     
+    var playCount = 0
+    
     func setupCell(with videoEntity: VideoEntity) {
         doSetupIfNeed()
         self.videoEntity = videoEntity
     }
     
+    func restart() {
+        if playCount >= 2 {
+            pauseVideo()
+            playCount = 0
+            playVideo()
+        }
+    }
+    
     func startTimer() {
         resetTimer()
+        guard playCount < 2 else { return }
         sourceObservable = Observable<Int>
             .interval(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
-                guard let this = self, this.isPLaying else { return }
+                guard let this = self, this.isPLaying, this.playCount < 2 else {
+                    return
+                }
                 if !this.videoObj.stepFrame() {
                     this.videoObj.redialPaly()
+                    this.playCount += 1
                     return
                 }
                 this.imageView.image = this.videoObj.currentImage
@@ -61,6 +75,7 @@ class VideoThumbCollectionViewCell: UICollectionViewCell, CustomCellable {
     override func prepareForReuse() {
         super.prepareForReuse()
         pauseVideo()
+        playCount = 0
     }
     
     func pauseVideo() {

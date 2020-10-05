@@ -14,6 +14,7 @@ class HomeViewController: HomeBaseVidThumbViewController<HomeViewInteractor, Hom
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     let fileManager = FileManager.default
     override func setupRX() {
         super.setupRX()

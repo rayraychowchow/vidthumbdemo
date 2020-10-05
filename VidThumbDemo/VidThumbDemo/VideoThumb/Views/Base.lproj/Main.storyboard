@@ -18,17 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak4-pj-tai">
-                                <rect key="frame" x="20" y="108" width="374" height="100"/>
+                                <rect key="frame" x="20" y="64" width="374" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="mGP-PI-DlW"/>
                                 </constraints>
                                 <state key="normal" title="Start Loop"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="9sJ-uW-gAJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="9sJ-uW-gAJ">
+                                        <segue key="commit" inheritsFrom="parent" id="vMl-lV-pOq"/>
+                                        <segue key="preview" inheritsFrom="commit" id="rBL-ML-CIu"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRI-nI-YFx">
-                                <rect key="frame" x="20" y="228" width="374" height="100"/>
+                                <rect key="frame" x="20" y="184" width="374" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Iwz-r3-KlO"/>
                                 </constraints>
@@ -63,9 +66,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fake_background" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-KD-QYm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6dQ-Im-E18">
-                                <rect key="frame" x="10" y="88" width="394" height="774"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="10" y="250" width="394" height="612"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1is-Xx-7Du">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -74,14 +80,32 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHB-7m-Ry4">
+                                <rect key="frame" x="0.0" y="44" width="207" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="luv-6T-BxX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnBackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPI-mI-xfS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6dQ-Im-E18" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6n9-9e-oXQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6dQ-Im-E18" secondAttribute="bottom" id="EHi-KX-lkI"/>
-                            <constraint firstItem="6dQ-Im-E18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ZAU-8l-PAp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dQ-Im-E18" secondAttribute="trailing" constant="10" id="pG7-7g-8OR"/>
+                            <constraint firstItem="OHB-7m-Ry4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Ga-Cw-5Or"/>
+                            <constraint firstItem="6dQ-Im-E18" firstAttribute="height" secondItem="Ld2-KD-QYm" secondAttribute="height" multiplier="0.71" id="KKN-Ip-q5h"/>
+                            <constraint firstItem="6dQ-Im-E18" firstAttribute="height" secondItem="Ld2-KD-QYm" secondAttribute="height" multiplier="0.66" priority="750" id="PaF-HP-lQh"/>
+                            <constraint firstItem="Ld2-KD-QYm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QeW-md-GHV"/>
+                            <constraint firstItem="Ld2-KD-QYm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SWd-8u-gmF"/>
+                            <constraint firstItem="6dQ-Im-E18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Sdc-DU-cQQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OHB-7m-Ry4" secondAttribute="trailing" symbolic="YES" id="TEc-6p-VDs"/>
+                            <constraint firstItem="OHB-7m-Ry4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VCt-Ox-1Mu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ld2-KD-QYm" secondAttribute="trailing" id="XS4-Rq-fk7"/>
+                            <constraint firstItem="OHB-7m-Ry4" firstAttribute="width" secondItem="Ld2-KD-QYm" secondAttribute="width" multiplier="0.5" id="Y3h-3s-9Ce"/>
+                            <constraint firstItem="6dQ-Im-E18" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="aah-Fj-lOw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6dQ-Im-E18" secondAttribute="trailing" constant="10" id="anK-bU-vpr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ld2-KD-QYm" secondAttribute="bottom" id="egs-FD-eFL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FvN-BR-9Rc">
@@ -92,6 +116,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionViewHeightConstaintForNoSafeArea" destination="PaF-HP-lQh" id="rcx-PI-AC9"/>
+                        <outlet property="collectionViewHeightConstraint" destination="KKN-Ip-q5h" id="4F5-Hu-aZg"/>
+                        <outlet property="imgViewFakeBackground" destination="Ld2-KD-QYm" id="y9u-3H-Od2"/>
                         <outlet property="videoThumbCollectionView" destination="6dQ-Im-E18" id="zGp-Bk-t77"/>
                         <segue destination="jhL-8M-DGo" kind="unwind" identifier="backToHome" unwindAction="unwindToHome:" id="yaO-6Q-Ldc"/>
                     </connections>
@@ -104,10 +131,9 @@
         <!--Navigation Controller-->
         <scene sceneID="DCI-S6-N7W">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z3G-WM-h8M" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="z3G-WM-h8M" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rtl-3j-eFv">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -120,7 +146,11 @@
             <point key="canvasLocation" x="-939.13043478260875" y="-38.169642857142854"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9sJ-uW-gAJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="fake_background" width="1125" height="2334"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -11,6 +11,9 @@ import RxSwift
 import AVKit
 
 class VideoThumbViewController: VidThumbViewController<VideoThumbInteractor, VideoThumbPresenter, BaseRouter> {
+    @IBOutlet weak var imgViewFakeBackground: UIImageView!
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var collectionViewHeightConstaintForNoSafeArea: NSLayoutConstraint!
     @IBOutlet weak var videoThumbCollectionView: UICollectionView!
     static let stopAllVideo = PublishSubject<Bool>()
     
@@ -30,6 +33,19 @@ class VideoThumbViewController: VidThumbViewController<VideoThumbInteractor, Vid
             flowLayout.itemSize = CGSize(width: itemWidth, height: (itemWidth * 360 / 640))
         }
         videoThumbCollectionView.register(UINib(nibName: VideoThumbCollectionViewCell.reuseId, bundle: nil), forCellWithReuseIdentifier: VideoThumbCollectionViewCell.reuseId)
+        updateLayout()
+    }
+    
+    func updateLayout() {
+        let window = UIApplication.shared.keyWindow
+        if let topPadding = window?.safeAreaInsets.top {
+            if (topPadding == 0) {
+                collectionViewHeightConstraint.isActive = false
+                imgViewFakeBackground.image = UIImage(named: "fake_no_safe_area_background")
+            } else {
+                collectionViewHeightConstaintForNoSafeArea.isActive = false
+            }
+        }
     }
     
     override func setupRX() {
@@ -55,12 +71,21 @@ class VideoThumbViewController: VidThumbViewController<VideoThumbInteractor, Vid
                     videoThumbCell.pauseVideo()
                 }
             }.disposed(by: disposeBag)
-
+        
+        videoThumbCollectionView.rx.itemSelected.subscribe { [weak self] indexPathEvent in
+            if let indexPath = indexPathEvent.element, let cell = self?.videoThumbCollectionView.cellForItem(at: indexPath) as? VideoThumbCollectionViewCell {
+                cell.restart()
+            }
+        }.disposed(by: disposeBag)
     }
     
     @IBAction func btnBackTapped(_ sender: Any) {
         VideoThumbViewController.stopAllVideo.onNext(true)
         presenter.cleanVideos()
         navigationController?.popViewController(animated: true)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }
