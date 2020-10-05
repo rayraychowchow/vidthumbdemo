@@ -71,12 +71,6 @@ class VideoThumbViewController: VidThumbViewController<VideoThumbInteractor, Vid
                     videoThumbCell.pauseVideo()
                 }
             }.disposed(by: disposeBag)
-        
-        videoThumbCollectionView.rx.itemSelected.subscribe { [weak self] indexPathEvent in
-            if let indexPath = indexPathEvent.element, let cell = self?.videoThumbCollectionView.cellForItem(at: indexPath) as? VideoThumbCollectionViewCell {
-                cell.restart()
-            }
-        }.disposed(by: disposeBag)
     }
     
     @IBAction func btnBackTapped(_ sender: Any) {
