@@ -13,10 +13,10 @@ import RxCocoa
 class VideoThumbPresenter: BasePresenter<VideoThumbInteractor, BaseRouter> {
     let avAssets = BehaviorRelay<[VideoEntity]>(value: [])
     
-    func getDemoVideos() -> Observable<Bool> {
-        return interactor.getDemoVideos().do{ [weak self] demoVideos in
+    func getDemoVideos() {
+        interactor.getDemoVideos().do(onSuccess: { [weak self] demoVideos in
             self?.avAssets.accept(demoVideos)
-        }.map({ _ in true })
+        }).subscribe().disposed(by: disposeBag)
     }
     
     func cleanVideos() {

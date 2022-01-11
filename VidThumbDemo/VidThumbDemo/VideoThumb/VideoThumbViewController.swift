@@ -19,7 +19,7 @@ class VideoThumbViewController: VidThumbViewController<VideoThumbInteractor, Vid
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.getDemoVideos().subscribe().disposed(by: disposeBag)
+        presenter.getDemoVideos()
     }
     
     override func viewDidAppear(_ animated: Bool) {

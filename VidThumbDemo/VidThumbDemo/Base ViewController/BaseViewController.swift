@@ -27,6 +27,7 @@ class VidThumbViewController<I: BaseInteractor, P: BasePresenter<I, R>, R: BaseR
 class BasePresenter<I: BaseInteractor, R: BaseRouter> {
     internal lazy var interactor = I()
     internal lazy var router = R()
+    let disposeBag = DisposeBag()
     required init() {}
 }
 
